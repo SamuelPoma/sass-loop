@@ -1,0 +1,19 @@
+// ciclo while in scss
+// creo 4 classi margin-top 15/30/45/60 px
+$i: 15;
+@while $i <= 60 {
+  .margin-top-#{$i} {
+    margin-top: $i;
+  }
+  $i: $i + 15 ;
+}
+
+// ciclo each in scss
+// assegno le stesse proprietà ad un numero variabile di elementi
+@each $h-properties in h1,h2,h3,h4,h5,h6 {
+  #{$h-properties} {
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
